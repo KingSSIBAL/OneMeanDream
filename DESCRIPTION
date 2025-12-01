@@ -1,13 +1,32 @@
 Package: OneMeanTTest
 Title: Enhanced One-Sample t-Test with Diagnostics and Approximations
 Version: 0.1.0
-Authors@R: person("Your", "Name", email = "your.email@example.com", role = c("aut", "cre"))
-Description: Performs one-sample t-tests using Wallace critical value approximation and Hastings p-value approximation. Includes comprehensive assumption checks (normality via Shapiro-Wilk, outlier detection) and diagnostic plots.
-License: MIT + file LICENSE
+Authors@R: 
+    c(
+      person("Arianna", "Tagulinao", role = "aut"),
+      person("Cindy", "Barcena", role = "aut"),
+      person("Francesca Anne", "Baclig", role = "aut"),
+      person("Josiah", "Tan", role = "aut"),
+      person("Junel", "Rey", role = "aut"),
+      person("Keano", "Pastrana", role = "aut"),
+      person("Matt Andrei", "Miclat", role = "aut"),
+      person("Mica", "Gonzales", role = "aut"),
+      person("Reijel", "Agub", role = "aut"),
+      person("Zan Eros ", "Policarpio", role = "aut")
+    )
+Description: Performs one-sample t-tests using Wallace critical value 
+    approximation and Hastings p-value approximation. Includes comprehensive 
+    assumption checks (normality via Shapiro-Wilk, outlier detection) and 
+    diagnostic plots.
+License: MIT
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
-Imports: stats, graphics
-Suggests: knitr, rmarkdown
-Keywords: htest, t-test, approximation, diagnostics
+Imports: 
+    stats,
+    graphics
+Suggests: 
+    knitr,
+    rmarkdown
 VignetteBuilder: knitr
+Keywords: htest, t-test, approximation, diagnostics

@@ -56,18 +56,27 @@ P-values use 4-term Hastings approximation for computational efficiency.
 }
 
 \examples{
-# Sample data
-set.seed(123)
-sample_data <- data.frame(
-  Earnings = rnorm(30, mean = 71, sd = 2.5)
+# Example 1: Earnings data (suspected to be below $75k)
+set.seed(181)
+earnings_data <- data.frame(
+  Earnings = round(rnorm(50, mean = 65, sd = 20), 0)
 )
+result <- oneMeanTTest("Earnings", mu = 75, ha = "less", data = earnings_data)
+print(result)
 
-# Left-tailed test
-result1 <- oneMeanTTest("Earnings", mu = 75, ha = "less", data = sample_data)
-print(result1)
+# Example 2: Test scores (check if above 70)
+set.seed(456)
+scores <- data.frame(
+  Score = round(runif(40, min = 50, max = 95), 1)
+)
+oneMeanTTest("Score", mu = 70, ha = "greater", data = scores, plot = FALSE)
 
-# Right-tailed test (no plot)
-result2 <- oneMeanTTest("Earnings", mu = 75, ha = "greater", 
-                        data = sample_data, plot = FALSE)
+# Example 3: Temperature readings (two-tailed test)
+temp_data <- data.frame(
+  Temperature = c(98.2, 98.6, 97.8, 99.1, 98.4, 98.7, 97.9, 
+                  98.5, 98.3, 98.8, 98.1, 98.6)
+)
+oneMeanTTest("Temperature", mu = 98.6, ha = "not equal", 
+             data = temp_data, alpha = 0.05)
 
 }
