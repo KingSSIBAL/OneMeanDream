@@ -37,6 +37,9 @@
 #' 1. Normality (Shapiro-Wilk test, p > alpha)
 #' 2. No outliers (1.5 * IQR rule)
 #'
+#' @importFrom stats na.omit sd shapiro.test qnorm dnorm quantile qqnorm qqline
+#' @importFrom graphics par layout mtext hist lines legend boxplot text
+#'
 #' @examples
 #' # Example 1: Earnings data (suspected to be below $75k)
 #' set.seed(181)
@@ -251,7 +254,7 @@ oneMeanTTest <- function(x, mu, ha, alpha, data, plot = TRUE) {
 #' @param x An object of class "oneMeanTTest".
 #' @param ... Additional arguments (ignored).
 #'
-#' @keywords internal
+#' @export
 print.oneMeanTTest <- function(x, ...) {
   cat("\n")
   cat("    One-Sample t-test\n")
@@ -298,4 +301,6 @@ print.oneMeanTTest <- function(x, ...) {
   cat("\nInterpretation:\n")
   cat(x$interpretation, "\n")
   cat("\n")
+  
+  invisible(x)
 }
