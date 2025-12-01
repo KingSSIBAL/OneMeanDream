@@ -1,2 +1,96 @@
-*.html
-*.R
+# R History and Session Data
+.Rhistory
+.RData
+.Rapp.history
+
+# RStudio Files
+.rproj.user/
+.Rproj
+rsconnect/
+
+# devtools temporary files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# User-specific files
+.Ruserdata
+
+# Build artifacts
+*.tar.gz
+*.zip
+*.tgz
+
+# pkgdown site
+docs/
+gh-pages/
+
+# vignettes
+vignettes/*.html
+vignettes/*.Rmd.bak
+
+# vignettes cache
+vignettes/.cache/
+
+# check results
+*_Rcheck/
+
+# package vignettes
+vignettes/*.pdf
+vignettes/*.log
+vignettes/*.out
+vignettes/*.aux
+vignettes/*.toc
+vignettes/figure/
+
+# R Markdown cache
+*_files/
+*_cache/
+
+# Temporary files
+temp/
+tmp/
+
+# Coverage
+coverage/
+
+# CRAN check
+.Rbuildignore
+.Rinstignore
+
+# MacOS
+.DS_Store
+.DS_Store?
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# LaTeX files
+*.log
+*.aux
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
+
+# renv
+renv/
+
+# quarto errors (ignore)
+*.qmd.log
