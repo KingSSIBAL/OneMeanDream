@@ -1,0 +1,93 @@
+---
+title: "Getting Started with OneMeanTTest"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting Started with OneMeanTTest}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(OneMeanTTest)
+```
+
+## Introduction
+
+OneMeanTTest provides enhanced one-sample t-tests using Wallace and Hastings approximations.
+
+## Basic Usage
+
+```
+# Sample data
+set.seed(123)
+sample_data <- data.frame(Earnings = rnorm(30, 71, 2.5))
+
+# Perform left-tailed test
+result <- oneMeanTTest("Earnings", mu = 75, ha = "less", data = sample_data)
+print(result)
+```
+
+## All Three Tests
+
+```
+# Left-tailed: H1: μ < 75
+oneMeanTTest("Earnings", mu=75, ha="less", data=sample_data, plot=FALSE)
+
+# Right-tailed: H1: μ > 75  
+oneMeanTTest("Earnings", mu=75, ha="greater", data=sample_data, plot=FALSE)
+
+# Two-tailed: H1: μ ≠ 75
+oneMeanTTest("Earnings", mu=75, ha="not equal", data=sample_data, plot=FALSE)
+```
+
+## Understanding Output
+
+The function returns:
+- **t_statistic**: Test statistic
+- **p_value**: Hastings approximation
+- **critical_value**: Wallace approximation
+- **decision**: Statistical conclusion
+- **is_normal**: Normality assumption check
+- **outliers**: Detected outliers
+```
+
+**Build vignettes:**
+```r
+devtools::build_vignettes()
+browseVignettes("OneMeanTTest")  # View locally
+```
+
+## **🎯 QUICK START: Complete Setup**
+
+```r
+# 1. Add package documentation
+# Create R/OneMeanTTest-package.R (code above)
+
+# 2. Build everything
+devtools::document()
+devtools::build_vignettes()
+devtools::install(build_vignettes = TRUE)
+
+# 3. Test searchable help
+library(OneMeanTTest)
+?OneMeanTTest              # Package overview
+?oneMeanTTest              # Function help
+browseVignettes("OneMeanTTest")  # Tutorial
+
+# 4. (OPTIONAL) Create website
+pkgdown::build_site()
+# Opens docs/index.html - deploy to GitHub Pages!
+```
+
+## **📦 YOUR HELP SYSTEM WILL HAVE:**
+
+| Feature | Command | What You Get |
+|---------|---------|--------------|
+| **Function help** | `?oneMeanTTest` | Full parameter docs, examples |
+| **Package help** | `?OneMeanTTest-package` | Overview, all functions |
+| **Search** | `help.search("Wallace")` | Find by keyword |
+| **Tutorial** | `browseVignettes()` | Step-by-step guide |
+| **Website** | `pkgdown::build_site()` | Full searchable site |
+
+

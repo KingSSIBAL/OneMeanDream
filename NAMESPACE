@@ -1,0 +1,4 @@
+export(oneMeanTTest)
+export(print.oneMeanTTest)
+importFrom(graphics, boxplot, hist, layout, legend, lines, mtext, par, text)
+importFrom(stats, dnorm, na.omit, qnorm, qqline, qqnorm, quantile, sd, shapiro.test)
