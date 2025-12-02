@@ -35,5 +35,6 @@
 #' \code{# View results}
 #' \code{print(result)}
 #'
+#' @aliases oneMeanDream
 #' @keywords internal
 "_PACKAGE"

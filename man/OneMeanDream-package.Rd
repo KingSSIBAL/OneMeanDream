@@ -4,6 +4,7 @@
 \name{OneMeanDream-package}
 \alias{OneMeanDream}
 \alias{OneMeanDream-package}
+\alias{oneMeanDream}
 \title{OneMeanDream: Enhanced One-Sample t-Test with Diagnostics}
 \description{
 Performs one-sample t-tests using Wallace critical value approximation and

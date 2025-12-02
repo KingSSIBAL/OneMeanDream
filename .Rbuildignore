@@ -4,3 +4,6 @@
 ^introduction[.]Rmd$
 ^LICENSE\.md$
 ^\.github$
+^man/for_.*\.Rd$
+^man/README\.md$
+^README\.Rmd$
