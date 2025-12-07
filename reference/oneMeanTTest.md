@@ -109,7 +109,7 @@ print(result)
 #> t-stat:      -3.0081 
 #> df:          49 
 #> Crit Val:    -1.6765 
-#> P-value:     0.001543 
+#> P-value:     0.002303 
 #> ------------------------------------------------------
 #> 95% CI:      [ -Inf ,  70.9364 ]
 #> Decision:    REJECT the null hypothesis (Ho) 
@@ -144,7 +144,7 @@ oneMeanTTest("Score", mu = 70, ha = "greater",
 #> t-stat:      2.828 
 #> df:          39 
 #> Crit Val:    1.6849 
-#> P-value:     0.00257 
+#> P-value:     0.003881 
 #> ------------------------------------------------------
 #> 95% CI:      [ 72.402 ,  Inf ]
 #> Decision:    REJECT the null hypothesis (Ho) 
@@ -180,7 +180,7 @@ oneMeanTTest("Temperature", mu = 98.6, ha = "not equal",
 #> t-stat:      -1.6775 
 #> df:          11 
 #> Crit Val:    2.2016 
-#> P-value:     0.09305 
+#> P-value:     0.1214 
 #> ------------------------------------------------------
 #> 95% CI:      [ 98.176 ,  98.6573 ]
 #> Decision:    FAIL TO REJECT the null hypothesis (Ho) 
