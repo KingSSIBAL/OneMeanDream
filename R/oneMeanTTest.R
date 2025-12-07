@@ -187,9 +187,9 @@ oneMeanTTest <- function(x, mu, ha, alpha, data, plot = TRUE) {
   
   # Compute p-value based on alternative hypothesis
   p_value <- switch(ha,
-                    "not equal" = 2 * (1 - Phi_hastings(abs(t_stat))),
-                    "less"      = Phi_hastings(t_stat),
-                    "greater"   = 1 - Phi_hastings(t_stat))
+                    "not equal" = 2 * (1 - Phi_hastings(abs(z_stat_equiv))),
+                    "less"      = Phi_hastings(z_stat_equiv),
+                    "greater"   = 1 - Phi_hastings(z_stat_equiv))
   
   # Confidence interval construction
   se <- sd_val / sqrt(n)
